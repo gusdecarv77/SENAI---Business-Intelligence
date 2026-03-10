@@ -1,0 +1,35 @@
+import pandas as pd
+import numpy as np
+
+#exercício 1 - Empty Series
+print("\nExercício 1")
+s = pd.Series()
+print(s)
+print("dtype:", s.dtype)
+
+#exercício 2 - Series a partir de uma lista
+print("\nExercício 2")
+lista = ["abacaxi", "limão", "maracujá", "kiwi", "manga"]
+s1 = pd.Series(lista)
+print(s1)
+
+#exercício 3 - Manipulando índices
+print("\nExercício 3")
+s2 = pd.Series([10, 20, 30, 40], index=["A", "B", "C", "D"])
+print(s2)
+
+#exercício 4 - Uso de Dicionários e Tratamento de Dados Ausentes (NaN)
+print("\nExercício 4")
+dados = {"jan": 100, "fev": 200}
+s3 = pd.Series(dados, index=["jan", "fev", "mar"])
+print(s3)   
+
+#exercício 5 - estrutura multidimensional
+print("\nExercício 5")
+dados1 = np.array([[1, 2], [3, 4], [5, 6]])
+indices = ["Linha1", "Linha2", "Linha3"]
+colunas = ["Coluna1", "Coluna2"]
+tipo = None
+copia = False
+df = pd.DataFrame(data=dados1, index=indices, columns=colunas, dtype=tipo, copy=copia)
+print(df)
