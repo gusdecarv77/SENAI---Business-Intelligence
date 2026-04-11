@@ -1,0 +1,23 @@
+# Análise de Inteligência de Negócios: Formação Educacional (Goiás)
+
+Este repositório contém a pipeline de extração, transformação, carga (ETL) e análise exploratória de dados (EDA) desenvolvida para avaliar a adequação da formação educacional em Goiás, com foco comparativo entre as cidades de Goiânia e Anápolis.
+
+## 🎯 Contexto e Decisão Arquitetural
+A proposta original visava a análise de dados de formação docente via BDE-Goiás. No entanto, devido à instabilidade do portal e ausência de um dicionário de dados claro para a variável de ensino superior, a fonte de dados foi pivotada para garantir a integridade da pipeline de BI. 
+
+O escopo foi expandido consumindo os microdados de **Perfil do Eleitorado Atual** do Tribunal Superior Eleitoral (TSE). Isso permitiu realizar a EDA de forma performática e gerar KPIs estruturais sobre o nível de formação da população geral, mantendo a temática educacional.
+
+## 🛠️ Tecnologias Utilizadas
+* **Python 3**
+* **Pandas** (Tratamento, Limpeza e Agrupamento de Dados)
+* **Matplotlib** (Data Storytelling e Visualização)
+
+## 📊 KPIs Desenvolvidos
+A análise gerou três indicadores estratégicos de negócio (BI):
+1. **Índice de Formação Superior (IFS):** O percentual da população com acesso ao ensino superior (completo ou incompleto).
+2. **Gap de Formação:** O déficit absoluto de cidadãos sem diploma de nível superior.
+3. **Densidade Educacional:** A proporção de indivíduos com ensino superior a cada 10 mil habitantes, métrica padrão para políticas públicas.
+
+## 📁 Estrutura
+* `analise_eleitores_GO.py`: Script principal com toda a lógica de tratamento e cálculo.
+* `Figure_1.png`, `Figure_2.png`, `Figure_3.png`: Dashboards gerados via Matplotlib.
